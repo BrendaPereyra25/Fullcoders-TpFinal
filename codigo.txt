@@ -1,0 +1,48 @@
+Proceso VentaDeEntradas
+	Definir precioSector1,precioSector2,precioSector3,precioSector4,total,cantidadEntradas Como Real
+	Definir sectorElegido Como Entero
+	precioSector1 <- 20000.0
+	precioSector2 <- 17000.0
+	precioSector3 <- 10000.0
+	precioSector4 <- 9000.0
+	total <- 0.0
+	Escribir 'Bienvenido a la venta de entradas para el concierto de Taylor Swift'
+	Escribir 'Sectores disponibles:'
+	Escribir '1. Sector 1 - $',precioSector1
+	Escribir '2. Sector 2 - $',precioSector2
+	Escribir '3. Sector 3 - $',precioSector3
+	Escribir '4. Sector 4 - $',precioSector4
+	Escribir '5. Salir'
+	Escribir 'Seleccione el sector deseado (1/2/3/4): '
+	Leer sectorElegido
+	Si (sectorElegido=1) Entonces
+		Escribir 'Ha elegido el Sector 1 - $',precioSector1
+		Escribir '¿Cuántas entradas desea comprar?'
+		Leer cantidadEntradas
+		total <- precioSector1*cantidadEntradas
+	FinSi
+	Si (sectorElegido=2) Entonces
+		Escribir 'Ha elegido el Sector 2 - $',precioSector2
+		Escribir '¿Cuántas entradas desea comprar?'
+		Leer cantidadEntradas
+		total <- precioSector2*cantidadEntradas
+	FinSi
+	Si (sectorElegido=3) Entonces
+		Escribir 'Ha elegido el Sector 3 - $',precioSector3
+		Escribir '¿Cuántas entradas desea comprar?'
+		Leer cantidadEntradas
+		total <- precioSector3*cantidadEntradas
+	FinSi
+	Si (sectorElegido=4) Entonces
+		Escribir 'Ha elegido el Sector 4 - $',precioSector4
+		Escribir '¿Cuántas entradas desea comprar?'
+		Leer cantidadEntradas
+		total <- precioSector4*cantidadEntradas
+	FinSi
+	Si (sectorElegido>=1 Y sectorElegido<=4) Entonces
+		Escribir 'El costo total es: $',total
+	FinSi
+	Si (sectorElegido<1 O sectorElegido>4) Entonces
+		Escribir 'Selección no válida.'
+	FinSi
+FinProceso
